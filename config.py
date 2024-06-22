@@ -5,7 +5,7 @@ class Config:
     API_HASH = environ.get("API_HASH", "ae456165cc04a86ee38bd8ced7dae0e3")
     BOT_TOKEN = environ.get("BOT_TOKEN", "6907596900:AAF-GGlBBcm1WWAF1ekm-nYcO1jwq-oV_H0") 
     BOT_SESSION = environ.get("BOT_SESSION", "bot") 
-    DATABASE_URI = "Paste Here Your MangoDB Url"
+    DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://rasy46765:uxDpwzp7DDHIKnCj@cluster0.rakmbj7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     DATABASE_NAME = environ.get("DATABASE_NAME", "Cluster0")
     BOT_OWNER_ID = [int(id) for id in environ.get("BOT_OWNER_ID", '1557042262').split()]
 
