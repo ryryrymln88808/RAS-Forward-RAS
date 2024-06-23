@@ -34,7 +34,7 @@ class Bot(Client):
         self.username = me.username
         self.first_name = me.first_name
         self.set_parse_mode(ParseMode.DEFAULT)
-        text = "**๏[-ิ_•ิ]๏ bot restarted !**"
+        text = "**à¹[-à¸´_â€¢à¸´]à¹ bot restarted !**"
         logging.info(text)
         success = failed = 0
         users = await db.get_all_frwd()
@@ -55,14 +55,6 @@ class Bot(Client):
            logging.info(f"Restart message status"
                  f"success: {success}"
                  f"failed: {failed}")
-
-        self.username = me.username
-        #web-response
-        app = web.AppRunner(await web_server())
-        await app.setup()
-        bind_address = "0.0.0.0"
-        await web.TCPSite(app, bind_address, PORT).start()
-
 
     async def stop(self, *args):
         msg = f"@{self.username} stopped. Bye."
