@@ -56,7 +56,7 @@ class Bot(Client):
                  f"success: {success}"
                  f"failed: {failed}")
 
-        self.username = usr_bot_me.username
+        self.username = me.username
         #web-response
         app = web.AppRunner(await web_server())
         await app.setup()
